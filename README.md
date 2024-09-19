@@ -1,4 +1,5 @@
 Event Management Web Application
+
 This is a full-stack web application for managing events. The project utilizes **React** for the frontend and **Flask** for the backend, providing a seamless user experience for managing, creating, and viewing events.
 
 Features
