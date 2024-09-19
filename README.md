@@ -1,8 +1,21 @@
-# React + Vite
+Event Management Web Application
+This is a full-stack web application for managing events. The project utilizes **React** for the frontend and **Flask** for the backend, providing a seamless user experience for managing, creating, and viewing events.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+- Create, view, update, and delete events
 
-Currently, two official plugins are available:
+Tech Stack
+Frontend:
+- React
+- Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Backend:
+- Flask
+- MongoDB
+
+Contributing
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes and submit a pull request.
+
+---
