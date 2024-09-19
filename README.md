@@ -1,6 +1,6 @@
-Event Management Web Application
+Event Management Web Application Front-end Repository
 
-This is a full-stack web application for managing events. The project utilizes **React** for the frontend and **Flask** for the backend, providing a seamless user experience for managing, creating, and viewing events.
+This is a full-stack web application for managing events. The project utilizes React for the frontend and Flask for the backend, providing a seamless user experience for managing, creating, and viewing events.
 
 Features
 - Create, view, update, and delete events
