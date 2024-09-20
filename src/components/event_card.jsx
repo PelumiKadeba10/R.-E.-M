@@ -1,9 +1,9 @@
 function CardEvent({ Title, Theme, date, location, time }) {
   return (
-    <div className="bg-slate-200 px-10 py-8 rounded-lg shadow-lg">
+    <div className="bg-slate-200 px-10 py-8 rounded-lg shadow-lg md:px-16">
       <h1 className="text-2xl font-bold mb-4">{Title}</h1>
-      <div className="text-[#281870]">
-        <p className="mb-3 font-sans"><strong>{Theme}</strong></p>
+      <div className="text-[#281870] text-sm">
+        <p className="mb-3 font-sans"><strong>Theme: {Theme}</strong></p>
         
         {/* Date */}
         <div className="flex">

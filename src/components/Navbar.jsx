@@ -35,9 +35,11 @@ function Navbar() {
       {/* Mobile Dropdown Menu */}
       {isOpen && (
         <div className="absolute top-20 right-0 bg-white w-full shadow-lg sm:hidden">
-          <ol className="flex flex-col space-y-6 py-4 px-6 text-sm text-slate-950">
-            <button className="hover:underline" onClick={toggleMenu}><li>Home</li></button>
+          <ol className="flex flex-col space-y-4 py-5 px-6 text-sm text-slate-950">
+            <button className="hover:underline" onClick={toggleMenu}><li>Home</li></button>            
+            <hr className="border-slate-300" />
             <button className="hover:underline" onClick={toggleMenu}><li>Previous Events</li></button>
+            <hr className="border-slate-300" />
             <button className="hover:underline" onClick={toggleMenu}><li>Upcoming Events</li></button>
           </ol>
         </div>
