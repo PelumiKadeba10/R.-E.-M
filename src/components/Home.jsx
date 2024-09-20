@@ -9,7 +9,7 @@ function Home() {
           <h1 className="text-[#382a76] text-5xl md:text-6xl font-bold leading-tight">
             RCCG EVENT MANAGER
           </h1>
-          <p className="pt-6 text-base md:text-lg text-gray-600">
+          <p className="pt-6 text-base md:text-l text-gray-600">
           Welcome to the RCCG Event Manager! Stay up to date with our upcoming services, conferences, and special programs. Our platform allows you to view details of past and upcoming events, including event themes, dates, venues, and times. Join us as we organize impactful gatherings that bring people closer to God and foster a strong sense of community. Explore, participate, and stay connected!
           </p>
           <Badge />
