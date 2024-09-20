@@ -18,12 +18,12 @@ function Navbar() {
 
       {/* Desktop Navigation Links */}
       <ol className="hidden sm:flex space-x-8 md:space-x-14 text-xs md:text-sm lg:text-base text-slate-950">
-        <button className='hover:underline'><li>Home</li></button>
-        <button className='hover:underline'><li>Previous Events</li></button>
-        <button className='hover:underline'><li>Upcoming Events</li></button>
+        <a href="#home" className="hover:underline"><li>Home</li></a>
+        <a href="#previous-events" className="hover:underline"><li>Previous Events</li></a>
+        <a href="#upcoming-events" className="hover:underline"><li>Upcoming Events</li></a>
       </ol>
 
-      {/* Mobile Menu Icon (Hamburger) */}
+      {/* Mobile Menu Icon */}
       <div className="sm:hidden flex items-center">
         <button className="text-[#382a76] focus:outline-none" onClick={toggleMenu}>
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -36,11 +36,11 @@ function Navbar() {
       {isOpen && (
         <div className="absolute top-20 right-0 bg-white w-full shadow-lg sm:hidden">
           <ol className="flex flex-col space-y-4 py-5 px-6 text-sm text-slate-950">
-            <button className="hover:underline" onClick={toggleMenu}><li>Home</li></button>            
+            <a href="#home" className="hover:underline" onClick={toggleMenu}><li>Home</li></a>
             <hr className="border-slate-300" />
-            <button className="hover:underline" onClick={toggleMenu}><li>Previous Events</li></button>
+            <a href="#previous-events" className="hover:underline" onClick={toggleMenu}><li>Previous Events</li></a>
             <hr className="border-slate-300" />
-            <button className="hover:underline" onClick={toggleMenu}><li>Upcoming Events</li></button>
+            <a href="#upcoming-events" className="hover:underline" onClick={toggleMenu}><li>Upcoming Events</li></a>
           </ol>
         </div>
       )}

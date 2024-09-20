@@ -1,6 +1,6 @@
 function CardEvent({ Title, Theme, date, location, time }) {
   return (
-    <div className="bg-slate-200 px-10 py-8 rounded-lg shadow-lg md:px-16">
+    <div className="bg-slate-200 pl-8 pr-20 py-7 rounded-lg shadow-lg md:pxs">
       <h1 className="text-2xl font-bold mb-4">{Title}</h1>
       <div className="text-[#281870] text-sm">
         <p className="mb-3 font-sans"><strong>Theme: {Theme}</strong></p>
