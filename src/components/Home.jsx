@@ -15,7 +15,7 @@ function Home() {
           <Badge />
         </div>
 
-        {/* Right Section */}
+        {/* Right Section stuff*/}
         <div className="px-10">
           <h1 className="pb-6 text-3xl font-bold text-center text-[#382a76]">Latest Event</h1>
           <CardEvent 
