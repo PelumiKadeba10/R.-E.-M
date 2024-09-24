@@ -27,7 +27,7 @@ function Upcoming_section() {
         console.log('No events found:', data);  
         return (
         <div className="bg-slate-50 pb-20">
-            <p className="text-2xl pt-8 pb-4 text-center text-[#382a76] font-bold">Upcoming Events</p>
+            <p className="text-2xl pt-8 pb-4 text-center text-[#382a76] font-bold">Events this Month</p>
             <div className="text-center font-semibold text-xl">No upcoming events.</div>;
         </div>
         )
@@ -35,8 +35,8 @@ function Upcoming_section() {
     
     return (
         <div className="bg-slate-50 pb-20">
-            <p className="text-2xl pt-8 pb-4 text-center text-[#382a76] font-bold">Upcoming Events</p>
-            <div className="grid grid-cols-1 gap-8 justify-center mx-10 px-10 md:grid md:grid-cols-3">
+            <p className="text-3xl pt-8 pb-4 text-center text-[#382a76] font-bold">Events this Month</p>
+            <div className="grid grid-cols-1 gap-8 justify-center mx-10 px-7 md:grid md:grid-cols-3">
                 {data.map((event) => (
                     <CardEvent 
                         Title={event.title}
