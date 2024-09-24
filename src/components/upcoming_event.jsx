@@ -1,35 +1,54 @@
-import CardEvent from "./event_card"
+import React, { useEffect, useState } from "react";
+import CardEvent from "./event_card";
 
-function Upcoming_section(){
-    return(
+function Upcoming_section() {
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/events/current_month')
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Fetched data:', data);
+                setData(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error);
+                setLoading(false);
+            });
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if (!data || data.length === 0) {
+        console.log('No events found:', data);  
+        return (
         <div className="bg-slate-50 pb-20">
             <p className="text-2xl pt-8 pb-4 text-center text-[#382a76] font-bold">Upcoming Events</p>
-            <div className="grid grid-cols-1 gap-8 justify-center mx-10 px-10 md:sgrid md:grid-cols-3 ">
-                
-                <CardEvent 
-                Title="Holy Ghost Service"
-                Theme="The Divine Favour"
-                date="19th, October,2024"
-                location="Redemption Camp"
-                time="9 am"
-                />
-                <CardEvent 
-                Title="Holy Ghost Service"
-                Theme="The Divine Favour"
-                date="19th, October,2024"
-                location="Redemption Camp"
-                time="9 am"
-                />
-                <CardEvent 
-                Title="Holy Ghost Service"
-                Theme="The Divine Favour"
-                date="19th, October,2024"
-                location="Redemption Camp"
-                time="9 am"
-                />
+            <div className="text-center font-semibold text-xl">No upcoming events.</div>;
+        </div>
+        )
+    }
+    
+    return (
+        <div className="bg-slate-50 pb-20">
+            <p className="text-2xl pt-8 pb-4 text-center text-[#382a76] font-bold">Upcoming Events</p>
+            <div className="grid grid-cols-1 gap-8 justify-center mx-10 px-10 md:grid md:grid-cols-3">
+                {data.map((event) => (
+                    <CardEvent 
+                        Title={event.title}
+                        Theme={event.theme}
+                        date={event.date}
+                        location={event.venue}
+                        time={event.time}
+                    />
+                ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default Upcoming_section
+export default Upcoming_section;
