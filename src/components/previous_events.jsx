@@ -1,4 +1,5 @@
 import CardEvent from "./event_card"
+// import { Link } from "react-router-dom"
 
 function Prev(){
     return(
@@ -27,6 +28,11 @@ function Prev(){
                 time="9 am"
                 />
             </div>
+            <button>
+                {/* <Link>
+                    See more
+                </Link> */}
+            </button>
         </div>
     )
 }
