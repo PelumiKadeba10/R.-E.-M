@@ -18,10 +18,10 @@ const formatDate = (data) => {
 
 function CardEvent({ Title, Theme, date, location, time }) {
   
-  // converts the date string from the API to date format
+  // converts the date string from the backend API to date format
   const Obj = new Date(date)
 
-  // Check if the date object is available from the database
+  // Check if the date object is not available from the database
   if (isNaN(Obj.getTime())) {
     return (
       <div className="bg-slate-200 pl-8 pr-32 py-7 rounded-lg shadow-md shadow-gray-400">
@@ -46,13 +46,13 @@ function CardEvent({ Title, Theme, date, location, time }) {
           <p className="mb-3 px-3"><strong>{location}</strong></p>
         </div>
 
-        {/* Time */}
+        {/* Time
         <div className="flex">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clipRule="evenodd" />
           </svg>
           <p className="px-3"><strong>{time}</strong></p>
-        </div>
+        </div> */}
       </div>
     </div>
     ); 
@@ -62,7 +62,7 @@ function CardEvent({ Title, Theme, date, location, time }) {
 
   return (
     <div className="bg-slate-200 pl-8 pr-10 py-6 rounded-lg shadow-md shadow-gray-400">
-      <h1 className="text-2xl font-bold mb-1">{Title}</h1>
+      <h1 className="text-2xl font-bold mb-3">{Title}</h1>
       <div className="text-[#281870]">
         <p className="mb-2 font-sans"><strong>Theme: {Theme}</strong></p>
         
@@ -84,12 +84,12 @@ function CardEvent({ Title, Theme, date, location, time }) {
         </div>
 
         {/* Time */}
-        <div className="flex">
+        {/* <div className="flex">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="size-6">
             <path fillRule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clipRule="evenodd" />
           </svg>
           <p className="px-2"><strong>{time}</strong></p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

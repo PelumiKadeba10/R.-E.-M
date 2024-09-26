@@ -19,8 +19,8 @@ function Navbar() {
       {/* Desktop Navigation Links */}
       <ol className="hidden sm:flex space-x-8 md:space-x-14 text-xs md:text-sm lg:text-base text-slate-950">
         <a href="#home" className="hover:underline"><li>Home</li></a>
-        <a href="#previous-events" className="hover:underline"><li>Previous Events</li></a>
-        <a href="#upcoming-events" className="hover:underline"><li>Upcoming Events</li></a>
+        <a href="#upcoming" className="hover:underline"><li>Upcoming Events</li></a>
+        <a href="#all" className="hover:underline"><li>All Events</li></a>
       </ol>
 
       {/* Mobile Menu Icon */}
@@ -38,9 +38,9 @@ function Navbar() {
           <ol className="flex flex-col space-y-4 py-5 px-6 text-sm text-slate-950">
             <a href="#home" className="hover:underline" onClick={toggleMenu}><li>Home</li></a>
             <hr className="border-slate-300" />
-            <a href="#previous-events" className="hover:underline" onClick={toggleMenu}><li>Previous Events</li></a>
+            <a href="#upcoming" className="hover:underline" onClick={toggleMenu}><li>Upcoming Events</li></a>
             <hr className="border-slate-300" />
-            <a href="#upcoming-events" className="hover:underline" onClick={toggleMenu}><li>Upcoming Events</li></a>
+            <a href="#all" className="hover:underline" onClick={toggleMenu}><li>All Events</li></a>
           </ol>
         </div>
       )}

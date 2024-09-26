@@ -13,11 +13,10 @@ function App() {
       <div id="home">
         <Home />
       </div>
-        <Current_month />
       <div id="upcoming">
         <Upcoming />
       </div>
-      <div id="All">
+      <div id="all">
         <All />
       </div>
       <Footer />

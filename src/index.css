@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .slick-dots {
+      @apply absolute bottom-[-30px] w-full flex justify-center list-none p-0;
+    }
+    
+    .slick-dots li button::before {
+      @apply text-lg text-[#382a76]; /* Dot color */
+    }
+    
+    .slick-dots li.slick-active button::before {
+      @apply text-[#6b5b95]; /* Active dot color */
+    }
+  }
+  

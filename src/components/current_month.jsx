@@ -40,7 +40,7 @@ function Current_month() {
     if (!data || data.length === 0) {
         console.log('No events found:', data);  
         return (
-        <div className="bg-slate-50 pb-20">
+        <div className="bg-white pb-20">
             <p className="text-2xl pt-8 pb-4 text-center text-[#382a76] font-bold">Events this Month</p>
             <div className="text-center font-semibold text-xl">No upcoming events.</div>;
         </div>
@@ -53,7 +53,7 @@ function Current_month() {
         infinite: true,
         speed: 500,
         pauseOnHover: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 3,
         nextArrow: <Arrow />,
         prevArrow: <Arrow />,
@@ -75,7 +75,7 @@ function Current_month() {
       };
 
     return (
-        <div className="bg-slate-50 pb-20">
+        <div className="bg-white pb-20">
             <p className="text-3xl pt-8 pb-4 text-center text-[#382a76] font-bold">Events this Month</p>
             <div className="mx-10 px-7 justify-center ">
                 <Slider {...settings}>
