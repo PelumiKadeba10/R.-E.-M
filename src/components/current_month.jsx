@@ -1,7 +1,21 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Slider from "react-slick";
 import CardEvent from "./event_card";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-function Upcoming_section() {
+function Arrow(props) {
+    const { className, onClick} = props;
+    return (
+      <div
+        className={className}
+        onClick={onClick}
+      />
+    );
+  }
+  
+//Retrieving data
+function Current_month() {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
@@ -32,23 +46,53 @@ function Upcoming_section() {
         </div>
         )
     }
-    
+
+    //carousel settings
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        pauseOnHover: true,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        nextArrow: <Arrow />,
+        prevArrow: <Arrow />,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            },
+          },
+        ],
+      };
+
     return (
         <div className="bg-slate-50 pb-20">
             <p className="text-3xl pt-8 pb-4 text-center text-[#382a76] font-bold">Events this Month</p>
-            <div className="grid grid-cols-1 gap-8 justify-center mx-10 px-7 md:grid md:grid-cols-3">
-                {data.map((event) => (
-                    <CardEvent 
+            <div className="mx-10 px-7 justify-center ">
+                <Slider {...settings}>
+                {data.map((event, index) => (
+                    <div key={index} className="p-3">
+                        <CardEvent
                         Title={event.title}
                         Theme={event.theme}
                         date={event.date}
                         location={event.venue}
-                        time={event.time}
-                    />
+                        time={event.time}/>
+                    </div>
                 ))}
+                </Slider>
             </div>
         </div>
     );
 }
 
-export default Upcoming_section;
+export default Current_month;

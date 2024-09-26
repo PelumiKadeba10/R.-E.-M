@@ -8,7 +8,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="bg-white pr-5 py- pl-7 flex justify-between items-center border-b-2 border-slate-900 font-inter sticky top-0">
+    <nav className="bg-white pr-5 py- pl-7 flex justify-between items-center border-b-2 border-slate-900 font-inter sticky top-0 z-10">
       <div className="flex items-center">
         <img src={logo} alt="Logo" className="h-16 w-16 md:h-24 md:w-24" />
         <p className="text-sm md:text-lg lg:text-xl text-[#382a76] font-semibold pl-3">

@@ -1,8 +1,10 @@
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
-import Prev from "./components/previous_events";
-import Upcoming_section from "./components/upcoming_event";
+import Upcoming from "./components/upcoming";
+import All from "./components/All_events";
+import Current_month from "./components/current_month";
 import Footer from "./components/footer";
+
 
 function App() {
   return (
@@ -11,11 +13,12 @@ function App() {
       <div id="home">
         <Home />
       </div>
-      <div id="upcoming-events">
-        <Upcoming_section />
+        <Current_month />
+      <div id="upcoming">
+        <Upcoming />
       </div>
-      <div id="previous-events">
-        <Prev />
+      <div id="All">
+        <All />
       </div>
       <Footer />
     </>

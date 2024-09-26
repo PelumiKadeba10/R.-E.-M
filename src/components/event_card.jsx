@@ -21,7 +21,7 @@ function CardEvent({ Title, Theme, date, location, time }) {
   // converts the date string from the API to date format
   const Obj = new Date(date)
 
-  // Check if the date object is available
+  // Check if the date object is available from the database
   if (isNaN(Obj.getTime())) {
     return (
       <div className="bg-slate-200 pl-8 pr-32 py-7 rounded-lg shadow-md shadow-gray-400">
