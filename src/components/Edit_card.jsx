@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const formatDate = (data) => {
   const day = data.getDate();
   const month = data.toLocaleString('default', { month: 'long' });
@@ -16,7 +18,7 @@ const formatDate = (data) => {
   return `${day}${suffix(day)} ${month}, ${year}`;
 };
 
-function CardEvent({ Title, Theme, date, location, time }) {
+function Edit_Card({ Title, Theme, date, location, time }) {
   
   // converts the date string from the backend API to date format
   const Obj = new Date(date)
@@ -90,11 +92,19 @@ function CardEvent({ Title, Theme, date, location, time }) {
           </svg>
           <p className="px-2"><strong>{time}</strong></p>
         </div> */}
+
+        <div className="flex items-center justify-center pt-4">
+          <Link to="/form">
+            <button className="bg-[#281870] text-white py-2 px-5 rounded-lg hover:bg-slate-800">
+             Edit Event
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
 
-export default CardEvent;
+export default Edit_Card;
 
 
