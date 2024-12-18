@@ -14,7 +14,7 @@ function Arrow(props) {
   );
 }
 
-// Function to group events by month-
+// Function to group events by month
 function groupEventsByMonth(events) {
     const grouped = events.reduce((acc, event) => {
         const eventMonth = event.month;  
@@ -33,7 +33,7 @@ function All() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/events/all')
+        fetch(import.meta.env.VITE_ALLEVENTS_URL)
             .then((response) => response.json())
             .then((data) => {
                 console.log('Fetched data:', data);

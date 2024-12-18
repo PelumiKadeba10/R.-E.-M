@@ -34,7 +34,7 @@ function Edit_event() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/events/all')
+        fetch('https://rccg-event-manger.onrender.com/events/all')
             .then((response) => response.json())
             .then((data) => {
                 console.log('Fetched data:', data);

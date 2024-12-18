@@ -20,7 +20,7 @@ function Current_month() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/events/current_month')
+        fetch('https://rccg-event-manger.onrender.com/events/current_month')
             .then((response) => response.json())
             .then((data) => {
                 console.log('Fetched data:', data);

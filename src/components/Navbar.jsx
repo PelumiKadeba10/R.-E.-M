@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 function Navbar() {
@@ -22,8 +22,8 @@ function Navbar() {
       <div className="hidden sm:flex space-x-8 md:space-x-14 text-xs md:text-sm lg:text-base text-slate-950">
         <a href="#home" className="hover:underline">Home</a>
         <a href="#upcoming" className="hover:underline">Upcoming Events</a>
-        <a href="#all" className="hover:underline">All Events</a>
-        <Link to="/admin" className="hover:underline">Admin</Link> {/* Link to Admin page */}
+        <a href="#all" className="hover:underline pr-10">All Events</a>
+        {/* <Link to="/admin" className="hover:underline">Admin</Link> Link to Admin page */}
       </div>
 
       {/* Mobile Menu Icon */}
@@ -45,7 +45,7 @@ function Navbar() {
             <hr className="border-slate-300" />
             <a href="#all" className="hover:underline" onClick={toggleMenu}>All Events</a>
             <hr className="border-slate-300" />
-            <Link to="/admin" className="hover:underline" onClick={toggleMenu}>Admin</Link> {/* Link to Admin page */}
+            {/* <Link to="/admin" className="hover:underline" onClick={toggleMenu}>Admin</Link> Link to Admin page */}
           </div>
         </div>
       )}

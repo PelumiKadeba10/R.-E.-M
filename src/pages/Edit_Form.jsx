@@ -5,7 +5,9 @@ function Form(){
     return(
         <>
         <Admin_Nav />
-        
+        <div>
+            
+        </div>
         <div>
             <Link to="/edit">
             <button className="bg-[#281870] text-white py-2 px-4 rounded-lg hover:bg-slate-800">

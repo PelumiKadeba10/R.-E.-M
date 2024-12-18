@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
+// import Home from './Home';
 
 function Admin_Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +22,7 @@ function Admin_Nav() {
       <ol className="hidden sm:flex space-x-8 md:space-x-14 text-xs md:text-sm lg:text-base text-slate-950">
         <Link to="/Admin" className="hover:underline">Home</Link>          
         <Link to="/edit" className="hover:underline">Edit</Link>          
-        <a href="#all" className="hover:underline"><li>Log-Out</li></a>
+        <a href="/" className="hover:underline"><li>Log-Out</li></a>
       </ol>
 
       {/* Mobile Menu Icon */}
@@ -41,7 +42,7 @@ function Admin_Nav() {
             <hr className="border-slate-300" />
             <Link to="/edit" className="hover:underline">Edit</Link>          
             <hr className="border-slate-300" />
-            <a href="#all" className="hover:underline" onClick={toggleMenu}><li>Log-Out</li></a>
+            <a href="/" className="hover:underline" onClick={toggleMenu}><li>Log-Out</li></a>
           </ol>
         </div>
       )}

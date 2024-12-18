@@ -20,7 +20,7 @@ function Upcoming() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('http://localhost:5000/events/upcoming')
+        fetch(import.meta.env.VITE_UPCOMING_URL)
             .then((response) => response.json())
             .then((data) => {
                 console.log('Fetched data:', data);
