@@ -8,11 +8,11 @@
     }
     
     .slick-dots li button::before {
-      @apply text-lg text-[#382a76]; /* Dot color */
+      @apply text-lg text-[#38a146]; /* Dot color */
     }
     
     .slick-dots li.slick-active button::before {
-      @apply text-[#6b5b95]; /* Active dot color */
+      @apply text-[#5b9569]; /* Active dot color */
     }
   }
   
